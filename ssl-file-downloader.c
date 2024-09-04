@@ -1,4 +1,12 @@
-// gcc -o up update.c -lssl -lcrypto
+/**
+ *
+ * @Author: Max Base
+ * @Repository: https://github.com/BaseMax/ssl-file-downloader-c
+ * @Date: 09/04/2024
+ * @Build: gcc -o ssl-file-downloader ssl-file-downloader.c -lssl -lcrypto
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,18 +20,10 @@
 
 int main()
 {
-	// https://raw.githubusercontent.com/SalamLang/Salam/main/src/array.c
-	// http://hc1.checker.in/file2link/documents/file_410223/salam
-
-	// const char *hostname = "hc1.checker.in";
-	// const char *path = "/file2link/documents/file_410223/salam";
-
-	// https://objects.githubusercontent.com/github-production-repository-file-5c1aeb/762660644/16869330
-	const char *hostname = "objects.githubusercontent.com";
-	const char *path = "/github-production-repository-file-111 5c1aeb/762660644/16869330?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240904%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240904T112343Z&X-Amz-Expires=300&X-Amz-Signature=63a1be384a67c2e82ecb37e2de4bc884f95234c66247373571551bb51b9bb017&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=762660644&response-content-disposition=attachment%3Bfilename%3Dmain.zip&response-content-type=application%2Fx-zip-compressed";
+	const char *hostname = "raw.githubusercontent.com";
+	const char *path = "/SalamLang/Salam/main/src/array.c";
 
 	const char *port = "443";
-	// const char *port = "80";
 	char request[1024];
 	char buffer[BUFFER_SIZE];
 
